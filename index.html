@@ -25,7 +25,7 @@
   <!-- Start your project here-->
   <div class="limiter">
 		<div class="container-login100">
-				<form class="login100-form validate-form" action="table.html" method="POST">
+				<form class="login100-form validate-form" enctype="multipart/form-data" action="table.html" method="POST">
 					<span class="login100-form-title">
 						<p style="align-content: center; color:black; font-size: 35px;">Details</p>
 					</span>
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" id="show">
-                    <select name="status" class="input100">
+                    <select name="status" onchange="show1()" id="status" class="input100">
                       <option value="status" class="input100">Status</option>
                       <option value="Start" class="input100">STARTED</option>
                       <option value="del" class="input100">DELAYED</option>
@@ -96,10 +96,10 @@
                       <i class="fa fa-hourglass" aria-hidden="true"></i>
                     </span>
                   </div>
-                  <input type="checkbox" value="check" id="show" onclick="show()">
+                  <input type="checkbox" value="check" id="show" >
                   <label for="checkbox">Is it delayed</label>
                   
-                  <fieldset id="display">
+                  <fieldset id="display1">
                       <div class="wrap-input100 validate-input">
                           <input class="input100" type="time" name="ename" placeholder="Event Name">
                           <span class="focus-input100"></span>
@@ -121,12 +121,18 @@
 
   <!-- SCRIPTS -->
   <script>
-  function show(){
+  function show1(){
     if(document.getElementById('show').checked){
-      document.getElementById('display').style.display='none';
+      //document.getElementById('display').style.display='none';
+      $('#display1').css('display', 'none');
     }
     else{
       document.getElementById('display').style.display='block';
+    }
+  }
+  function show2(){
+    if($('#status').checked){
+      $('#display')
     }
   }
   </script>
