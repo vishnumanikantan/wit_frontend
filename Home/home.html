@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <script src="js/nav.js"> </script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+
+  <script>
+   
+   function name()
+   { $.ajax(
+    {
+      url:'/status',
+      method:'get',
+      dataType:'json',
+      success:function(data)
+      {
+        data.forEach(jh => {
+          if(jh.code =='jh'){
+
+              if(jh.event.status == 'started')
+              {
+                document.getElementById('s1').innerHTML = jh.event.name ,
+                document.getElementById('stt1').innerHTML = jh.event.starttime ,
+                document.getElementById('st1').innerHTML = '<span class="dot" style="background-color:green">'+ jh.event.status + '</span>',
+              }
+              else if (jh.event.status=='delayed')
+              {
+                document.getElementById('s1').innerHTML = jh.event.name ,
+                document.getElementById('stt1').innerHTML = jh.event.starttime ,
+                document.getElementById('del1').innerHTML = jh.event.name ,
+                document.getElementById('st1').innerHTML = '<span class="dot" style="background-color:red">'+ jh.event.status + '</span>',
+              }
+              else
+              {
+                document.getElementById('s1').innerHTML = jh.event.name ,
+                document.getElementById('stt1').innerHTML = jh.event.starttime ,
+                document.getElementById('st1').innerHTML = '<span class="dot" style="background-color:black">'+ jh.event.status + '</span>',
+              }
+             
+          }
+
+          else if(aud.code =='aud'){
+                     if(apj.event.status == 'started')
+              {
+                document.getElementById('s2').innerHTML = aud.event.name ,
+                document.getElementById('stt2').innerHTML = aud.event.starttime ,
+                document.getElementById('st2').innerHTML = '<span class="dot" style="background-color:green">'+ aud.event.status + '</span>',
+              }
+              else if (aud.event.status=='delayed')
+              {
+                document.getElementById('s2').innerHTML = aud.event.name ,
+                document.getElementById('stt2').innerHTML = aud.event.starttime ,
+                document.getElementById('del2').innerHTML = aud.event.name ,
+                document.getElementById('st2').innerHTML = '<span class="dot" style="background-color:red">'+ aud.event.status + '</span>',
+              }
+              else
+              {
+                document.getElementById('s2').innerHTML = aud.event.name ,
+                document.getElementById('stt2').innerHTML = aud.event.starttime ,
+                document.getElementById('st2').innerHTML = '<span class="dot" style="background-color:black">'+ aud.event.status + '</span>',
+              }
+           }
+
+           else if(apj.code =='apj'){
+                     if(apj.event.status == 'started')
+              {
+                document.getElementById('s3').innerHTML = apj.event.name ,
+                document.getElementById('stt3').innerHTML = apj.event.starttime ,
+                document.getElementById('st3').innerHTML = '<span class="dot" style="background-color:green">'+ apj.event.status + '</span>',
+              }
+              else if (apj.event.status=='delayed')
+              {
+                document.getElementById('s3').innerHTML = apj.event.name ,
+                document.getElementById('stt3').innerHTML = apj.event.starttime ,
+                document.getElementById('del3').innerHTML = apj.event.name ,
+                document.getElementById('st3').innerHTML = '<span class="dot" style="background-color:red">'+ apj.event.status + '</span>',
+              }
+              else
+              {
+                document.getElementById('s3').innerHTML = apj.event.name ,
+                document.getElementById('stt3').innerHTML = apj.event.starttime ,
+                document.getElementById('st3').innerHTML = '<span class="dot" style="background-color:black">'+ apj.event.status + '</span>',
+              }
+           }
+
+           else if(eee.code =='eee'){
+                     if(eee.event.status == 'started')
+              {
+                document.getElementById('s4').innerHTML = eee.event.name ,
+                document.getElementById('stt4').innerHTML = eee.event.starttime ,
+                document.getElementById('st4').innerHTML = '<span class="dot" style="background-color:green">'+ eee.event.status + '</span>',
+              }
+              else if (eee.event.status=='delayed')
+              {
+                document.getElementById('s4').innerHTML = eee.event.name ,
+                document.getElementById('stt4').innerHTML = eee.event.starttime ,
+                document.getElementById('del4').innerHTML = eee.event.name ,
+                document.getElementById('st4').innerHTML = '<span class="dot" style="background-color:red">'+ eee.event.status + '</span>',
+              }
+              else
+              {
+                document.getElementById('<i class="fas fa-signal-4"></i>').innerHTML = eee.event.name ,
+                document.getElementById('stt4').innerHTML = eee.event.starttime ,
+                document.getElementById('st4').innerHTML = '<span class="dot" style="background-color:black">'+ eee.event.status + '</span>',
+              }
+           }
+
+           else if(arc.code =='arc'){
+                     if(arc.event.status == 'started')
+              {
+                document.getElementById('s5').innerHTML = arc.event.name ,
+                document.getElementById('stt5').innerHTML = arc.event.starttime ,
+                document.getElementById('st5').innerHTML = '<span class="dot" style="background-color:green">'+ arc.event.status + '</span>',
+              }
+              else if (arc.event.status=='delayed')
+              {
+                document.getElementById('s5').innerHTML = arc.event.name ,
+                document.getElementById('stt5').innerHTML = arc.event.starttime ,
+                document.getElementById('del5').innerHTML = arc.event.name ,
+                document.getElementById('st5').innerHTML = '<span class="dot" style="background-color:red">'+ arc.event.status + '</span>',
+              }
+              else
+              {
+                document.getElementById('s5').innerHTML = arc.event.name ,
+                document.getElementById('stt5').innerHTML = arc.event.starttime ,
+                document.getElementById('st5').innerHTML = '<span class="dot" style="background-color:black">'+ arc.event.status + '</span>',
+              }
+           }
+          
+        }
+        setInterval(name(), 3000););
+        
+       /* if(data=="NOT_STARTED")
+        {
+          getElementbyId("1").innerHTML =  '<span class="dot" style="background-color:red">'+ hall.event.status + '</span>';
+        }
+
+        else if(data=="STARTED")
+        {
+          getElementbyID.innerHTML()=  <span class="dot" style="background-color:green"></span>+data;
+        }
+        else if(data=="DELAYED")
+        {
+          getElementbyID.innerHTML()=  <span class="dot" style="background-color:green"></span>+data;
+        }
+      }
+
+    }
+  )
+   }
+   setInterval(name(), 3000);*/
+  </script>
+
+</head>
+
+<body>
+  <h2 class="mb-0 site-logo"><a href="#" style="color:blue ;position:relative;top:50px;left:50px;">WIT</a></h2>
+  <div id="mySidenav" class="sidenav" class="col-sm-5">
+   
+    <div class="search-container">
+      <form action="/action_page.php">
+
+        <input type="text" placeholder="Search.." name="search" style="line-height:40px;">
+        <button type="submit"><i class="fa fa-search" ></i></button>
+      </form>
+    </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+
+  <span class="opnav" onclick="openNav()" style="position:absolute;color:blue">&#9776; </span>
+  <div>
+
+    <div class="card1 col-lg-4 col-lg-offset-1 col-sm-12">
+
+      <div class="title">
+        <h2 style="color:blue">Jubilee Hall</h2>
+      </div>
+      <div class="image">
+        <img src="img/jub.jpg">
+      </div>
+      <h4>Event Name:<div id="s1"></div></h4>
+      <h4>StartTime:<div id="stt1"></div></h4>
+       <div id="del1"></div> 
+      <h4>Status:</h4>
+      <div id="st1">
+
+      </div>
+  
+
+    </div>
+
+    <div class="card1 col-lg-4 col-lg-offset-1 col-sm-12">
+
+      <div class="title">
+        <h2 style="color:blue">Auditorium</h2>
+      </div>
+      <div class="image">
+
+        <img src="img/Aud.jpg">
+      </div>
+      <h4>Event Name:<div id="s2"></div></h4>
+      <h4>StartTime:<div id="stt2"></div></h4>
+       <div id="del2"></div> 
+      <h4>Status:</h4>
+      <div id="st2">
+
+    </div>
+
+
+  </div>
+  
+  <div style=" position:relative;top:100px;">
+    <div class="card2 col-lg-4 col-lg-offset-1 col-sm-12">
+      <div class="title">
+        <h2 style="color:blue">Apj Hall</h2>
+      </div>
+      <div class="image">
+        <img src="img/apj.jpg">
+      </div>
+      <h4>Event Name:<div id="s3"></div></h4>
+      <h4>StartTime:<div id="stt3"></div></h4>
+       <div id="del3"></div> 
+      <h4>Status:</h4>
+      <div id="st3">
+
+    </div>
+    </div>
+    <div class="card2 col-lg-4 col-lg-offset-1 col-sm-12" >
+
+      <div class="title">
+        <h2 style="color:blue">EEE Seminar</h2>
+      </div>
+      <div class="image">
+
+        <img src="img/EEE.jpg">
+      </div>
+      <h4>Event Name:<div id="s4"></div></h4>
+      <h4>StartTime:<div id="stt4"></div></h4>
+       <div id="del4"></div> 
+      <h4>Status:</h4>
+      <div id="st4">
+
+    </div>
+
+
+    
+</div>
+
+<div class="card3 col-lg-4 col-lg-offset-4 col-sm-12">
+
+<div class="title">
+  <h2 style="color:blue">Arch Seminar Hall</h2>
+</div>
+<div class="image">
+
+  <img src="img/EEE.jpg">
+</div>
+<h4>Event Name:<div id="s5"></div></h4>
+<h4>StartTime:<div id="stt5"></div></h4>
+ <div id="del5"></div> 
+<h4>Status:</h4>
+<div id="st5">
+
+</div>
+
+</body>
+
+</html>
