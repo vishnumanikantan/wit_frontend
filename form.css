@@ -1,6 +1,8 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
     /* For mobile phones: */
     .log-form {
-      width: 100%;
+      margin-left: 35%;
+      margin-right: 35%;
+      margin-top: 10%;
     }
   }
