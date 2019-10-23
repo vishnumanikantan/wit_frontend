@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>details form</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+  <link rel="JavaScript" type="text/javascript" href="js/form.js">
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <div class="container register ">
+      <div class="row">
+          <div class="col-md-3 register-left">
+              <img src="" alt=""/>
+              <h3>Enter the details</h3>
+              <br>
+              <br>
+          </div>
+          <div class="col-md-9 register-right">
+              <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"></a>
+                  </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <h3 class="register-heading">Details of the Event</h3>
+                      <div class="row register-form">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <select name="hall" class="form-control">
+                                      <option value="audi" class="form-control">AUDITORIUM</option>
+                                      <option value="jubilee" class="form-control">JUBILEE</option>
+                                      <option value="eee" class="form-control">EEE SEMINAR HALL</option>
+                                      <option value="apj" class="form-control">APJ HALL</option>
+                                    </select> 
+                              </div>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Event name" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <input type="date" class="form-control" placeholder="Date" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <p>Scheduled Time</p>
+                              </div>
+                              <div class="form-group">
+                                  <input type="time" class="form-control"  placeholder="Scheduled time" value="" />
+                              </div>
+                              <div class="form-group">
+                                  <p>Expected Time</p>
+                              </div>
+                              <div class="form-group">
+                                  <input type="time" class="form-control"  placeholder="Expected time" value="" />
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                      aria-describedby="inputGroupFileAddon01" placeholder="Upload">
+                                    <label class="custom-file-label" for="inputGroupFile01">Upload File</label>
+                                  </div>
+                                </div>
+                              <div class="form-group">
+                                  <p>Status</p>
+                              </div>
+                              <div class="form-group">
+                                  <select class="form-control" id="show1">
+                                      <option class="hidden" value=0 selected disabled>NOT STARTED</option>
+                                      <option value=1>STARTED</option>
+                                      <option value=2>DELAYED</option>
+                                      <option value=4>CANCELLED</option>
+                                      <option value=5>COMPLETED</option>
+                                  </select>
+                              </div>
+                              <div style="display:none;" class="form-group" id="display1">
+                                  <input type="time" class="form-control"  placeholder="Expected time" value="" />
+                              </div>
+                              <input type="submit" class="btnRegister"  value="Submit"/>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+  <!-- Start your project here-->
+
+  <!-- SCRIPTS -->
+  <script>
+
+  </script>
+  <!-- <script>
+  function show1(){
+    if(document.getElementById('show').value=='delayed'){
+      //document.getElementById('display').style.display='none';
+      $('#display1').css('display', 'none');
+    }
+    else{
+      $('#display1').css('display', 'block');
+    }
+  }
+  function show2(){
+    if($('#status').checked){
+      $('#display')
+    }
+  }
+  </script> -->
+  <script>
+      $("#show1").on('change', function() {
+        if ( this.value == '1')
+        {
+          $("#display1").show();
+        }
+        else
+        {
+          $("#display1").hide();
+        }
+      });
+  </script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+</body>
+
+</html>
