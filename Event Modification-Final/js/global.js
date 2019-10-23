@@ -11,10 +11,7 @@
                 format: 'DD/MM/YYYY'
             },
         });
-        $('.datepicker').datepicker({
-            format: 'mm/dd/yyyy',
-            startDate: '-3d'
-          });
+    
         var myCalendar = $('.js-datepicker');
         var isClick = 0;
     
@@ -47,8 +44,7 @@
         $('.daterangepicker').on('click',function(e){
             e.stopPropagation();
         });
-
-        
+    
     
     } catch(er) {console.log(er);}
     /*[ Select 2 Config ]
