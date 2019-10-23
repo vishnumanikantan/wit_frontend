@@ -13,3 +13,6 @@
   .button-submit{
     left: auto;
   }
+  .bg-gradient-primary {
+    background: linear-gradient(87deg, #00f6fe 0, #5c31af 100%) !important;
+  }
