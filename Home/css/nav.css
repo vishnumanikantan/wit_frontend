@@ -72,25 +72,25 @@ body {
     font-size:30px;
     cursor:pointer;
     position:relative;
-    top:60px;
+    top:30px;
     right:70px;
     
   }
 
   .card1{
     position:relative;
-    top:100px;
+    top:20px;
     
   }
 
   .card2{
     position:relative;
-    top:100px;
+    top:0px;
     
   }
   .card3{
     position:relative;
-    top:100px;
+    top:7px;
   }
 
   .image img{
