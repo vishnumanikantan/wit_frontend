@@ -4,14 +4,14 @@
 }
 
 /* Style inputs */
-input[type=text], select, textarea {
+/*input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-}
+}*/
 
 /*input[type=submit] {
   background-color: #4CAF50;
@@ -31,8 +31,9 @@ input[type=submit]:hover {
   background-color: white;
   padding: 15px;
   padding-bottom: 0%;
-  width: 30%;
-  opacity: 0.8;
+  column-width: 20%;
+  -webkit-column-width: 800px;
+  opacity: 0.9;
 }
 
 /* Create two columns that float next to eachother */
@@ -50,16 +51,54 @@ input[type=submit]:hover {
   clear: both;
 }
 
-.names{
+.row{
   padding-top: 0px;
-  font-size: 20px;
+  font-size: 1vw;
+  
+}
+.row h2{
+  font-size: 2vw;
 }
 
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
+  .column {
     width: 100%;
     margin-top: 0;
+  }
+}
+
+body{
+  background: -webkit-linear-gradient(bottom, #5d31af, #00f7ff);
+}
+.r1{
+  background: -webkit-linear-gradient(left, #00c6ff,white);
+  margin-top: 5%;
+  padding: 3%;
+  border-radius: 20%; 
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+
+
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 40px;
   }
 }
